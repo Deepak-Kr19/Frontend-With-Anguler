@@ -1,0 +1,34 @@
+#para1{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: chartreuse;
+}
+#para2{
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: yellow;
+}
+#para3{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cyan;
+}
+
+.sameArticle{
+    color: purple;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: magenta;
+}
+
+#art2{
+    color: orange;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: pink;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    /* font-size: ; */
+    /* background-color: ; */
+}

@@ -1,0 +1,10 @@
+#btnexample > #btn1{
+    background-color: red;
+    color: white;
+
+}
+
+#btnexample > #btn1:hover{
+    background-color: green;
+    color: white;
+}

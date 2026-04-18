@@ -1,0 +1,10 @@
+@import url(three.css);
+@import url("class.css");
+
+p{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: chartreuse;
+
+
+}

@@ -1,0 +1,18 @@
+@import url(jet.css);
+@import url(lassi.css);
+
+h1{
+    margin: 20px;
+}
+
+.biryani > li{
+    color: brown;
+}
+
+.biryani > li > ul > li{
+    color: green;
+}
+
+.biryani > #paneer{
+    color: lightgreen;
+}

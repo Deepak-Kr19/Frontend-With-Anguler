@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PAN Validation</title>
+
+  <style>
+    input {
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    .valid {
+      border: 2px solid green;
+    }
+
+    .invalid {
+      border: 2px solid red;
+    }
+
+    #result {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pancard</h2>
+
+  <form>
+    <!-- 🔥 oninput added -->
+    <input type="text" id="pancard" placeholder="Enter pancard number" oninput="validate()" />
+    <p id="result"></p>
+  </form>
+
+  <script>
+    function validate() {
+      let input = document.getElementById("pancard");
+      let pancard = input.value;
+
+      // 🔥 Strict regex (full match)
+      let regex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+
+      if (pancard === "") {
+        input.classList.remove("valid", "invalid");
+        document.getElementById("result").innerText = "";
+        return;
+      }
+
+      if (regex.test(pancard)) {
+        input.classList.add("valid");
+        input.classList.remove("invalid");
+        document.getElementById("result").innerText = "Valid PAN";
+      } else {
+        input.classList.add("invalid");
+        input.classList.remove("valid");
+        document.getElementById("result").innerText = "Invalid PAN";
+      }
+    }
+  </script>
+
+</body>
+</html>

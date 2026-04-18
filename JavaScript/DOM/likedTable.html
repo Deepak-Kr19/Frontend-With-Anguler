@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Table</title>
+
+    <!-- <style>
+        body {
+            font-family: Arial;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid blue;
+            padding: 10px;
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .like {
+            margin-right: 10px;
+        }
+
+        .liked {
+            background-color: lightgreen;
+        }
+
+        .disliked {
+            background-color: orange;
+        }
+    </style> -->
+</head>
+<body>
+
+    <button onclick="loadTable()">View Laptops</button>
+
+    <table id="t1" style="display: none;"></table>
+
+    <script>
+        var laptops = [
+            {id:"1", brand:"HP", price:100000, quantity:8},
+            {id:"2", brand:"DELL", price:80000, quantity:5},
+            {id:"3", brand:"LENOVO", price:12000, quantity:7}
+        ];
+
+        function loadTable(){
+            let table = document.getElementById('t1');
+            table.style.display = "table";
+
+            table.innerHTML = `
+                <tr>
+                    <th>ID</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            `;
+
+            for(let laptop of laptops){
+
+                let tr = document.createElement('tr');
+
+                tr.insertCell().innerText = laptop.id;
+                tr.insertCell().innerText = laptop.brand;
+                tr.insertCell().innerText = laptop.price;
+                tr.insertCell().innerText = laptop.quantity;
+
+                let actionCell = tr.insertCell();
+
+                let likeBtn = document.createElement('button');
+                likeBtn.innerText = "👍 Like";
+                likeBtn.classList.add("like");
+
+                let dislikeBtn = document.createElement('button');
+                dislikeBtn.innerText = "👎 Dislike";
+
+                // 🔥 Like Click
+                likeBtn.onclick = function(){
+                    tr.classList.remove("disliked");
+                    tr.classList.add("liked");
+                }
+
+                // 🔥 Dislike Click
+                dislikeBtn.onclick = function(){
+                    tr.classList.remove("liked");
+                    tr.classList.add("disliked");
+                }
+
+                actionCell.appendChild(likeBtn);
+                actionCell.appendChild(dislikeBtn);
+
+                table.appendChild(tr);
+            }
+        }
+    </script>
+
+</body>
+</html>

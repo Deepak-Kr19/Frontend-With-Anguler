@@ -1,0 +1,22 @@
+BOM (Browser Object Model)
+
+Window:-
+1.history
+2.frames
+3.navigator
+4.screen
+5.document
+
+// DOM INHERITANCE
+// The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing developers to manipulate the content and structure of web pages dynamically. Inheritance in the DOM refers to the way properties and methods are passed down from parent objects to child objects. For example, if you have a parent element with certain styles or attributes, its child elements can inherit those styles or attributes unless they are overridden. This allows for efficient and consistent styling and behavior across related elements in the DOM.
+
+#Properties for traversing the DOM
+// parentNode
+// childNodes
+// firstChild
+// lastChild
+// nextSibling
+// previousSibling
+// parentElement
+// children
+// 
