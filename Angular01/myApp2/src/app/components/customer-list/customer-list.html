@@ -1,0 +1,16 @@
+<p>customer-list works!</p>
+<h2>Customer List</h2>
+
+<input [formControl]="searchControl" placeholder="Search by name">
+
+<div *ngFor="let customer of paginatedCustomers$ | async">
+  <app-customer-detail [customer]="customer"></app-customer-detail>
+</div>
+
+<button (click)="prevPage()" [disabled]="isPrevDisabled$ | async">
+  Previous
+</button>
+
+<button (click)="nextPage()" [disabled]="isNextDisabled$ | async">
+  Next
+</button>

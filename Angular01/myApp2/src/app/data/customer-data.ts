@@ -1,0 +1,58 @@
+import { Customer } from '../models/customer';
+
+export const CUSTOMER_DATA: Customer[] = [
+  {
+    id: 1,
+    name: 'Deepak',
+    address: 'Delhi',
+    email: 'deepak@gmail.com',
+    phone: '111111',
+    dateOfBirth: '2000-01-01',
+    gender: 'Male',
+  },
+  {
+    id: 2,
+    name: 'Raj Deepak',
+    address: 'Mumbai',
+    email: 'raj@gmail.com',
+    phone: '222222',
+    dateOfBirth: '1999-02-02',
+    gender: 'Male',
+  },
+  {
+    id: 3,
+    name: 'Deepdas',
+    address: 'Patna',
+    email: 'deepdas@gmail.com',
+    phone: '333333',
+    dateOfBirth: '1998-03-03',
+    gender: 'Male',
+  },
+  {
+    id: 4,
+    name: 'Aman',
+    address: 'Kolkata',
+    email: 'aman@gmail.com',
+    phone: '444444',
+    dateOfBirth: '1997-04-04',
+    gender: 'Male',
+  },
+  {
+    id: 5,
+    name: 'Priya',
+    address: 'Chennai',
+    email: 'priya@gmail.com',
+    phone: '555555',
+    dateOfBirth: '1996-05-05',
+    gender: 'Female',
+  },
+  {
+    id: 6,
+    name: 'Sneha',
+    address: 'Bangalore',
+    email: 'sneha@gmail.com',
+    phone: '666666',
+    dateOfBirth: '1995-06-06',
+    gender: 'Female',
+  },
+];

@@ -1,0 +1,16 @@
+<div class="container">
+    <nav>
+        <a routerLink="/view">View Training</a>
+        <a routerLink="/add">Add Training</a>
+
+    <br><br>
+
+    <button (click)="setRole('manager')">Manager</button>
+    <button (click)="setRole('trainee')">Trainee</button>
+
+    <p>Current Role: {{ auth.role() }}</p>
+
+</nav>
+</div>  
+
+<hr>

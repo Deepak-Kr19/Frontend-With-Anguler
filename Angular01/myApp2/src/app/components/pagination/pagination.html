@@ -1,0 +1,12 @@
+<!-- <p>pagination works!</p> -->
+
+<div>
+    <button class="btn btn-secondary" (click)="emitPageEvent(currentPage-1)" [disabled]="currentPage === 1">Previous</button>
+    
+    @for(num of numbers; track num){
+        <button class="btn" (click)="emitPageEvent(num)">{{num}}</button>
+    }
+    
+    <button class="btn btn-secondary" (click)="emitPageEvent(currentPage + 1)" [disabled]="currentPage === max">Next</button>
+</div>
+

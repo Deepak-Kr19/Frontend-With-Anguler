@@ -1,0 +1,11 @@
+<h2>Upcoming Trainings</h2>
+
+<div *ngFor="let t of trainingService.trainings()">
+    <p><b>{{ t.title }}</b></p>
+    <p>Topic: {{ t.topic }}</p>
+    <p>Trainer: {{ t.trainerName }}</p>
+    <p>Venue: {{ t.venue }}</p>
+    <p>Date: {{ t.startDate }} - {{ t.endDate }}</p>
+    <hr>
+
+</div>

@@ -1,0 +1,24 @@
+<h2>Add Training</h2>
+
+<div *ngIf="!auth.isManager()">
+  <p>Only manager can add training</p>
+</div>
+
+<form #f="ngForm" (ngSubmit)="addTraining(f)" *ngIf="auth.isManager()">
+    <label for="title">Enter Title: </label>
+    <input type="text" name="title" [(ngModel)]="training.title" placeholder="Enter Title" required> <br>
+    <label for="topic">Enter Topic: </label>
+    <input type="text" name="topic" [(ngModel)]="training.topic" placeholder="Enter Topic" required> <br>
+    <label for="maxTrainee">Enter MaxTrainee: </label>
+    <input type="number" name="maxTrainee" [(ngModel)]="training.maxTrainee" required> <br>
+    <label for="startDate">Enter StartDate: </label>
+    <input type="date" name="startDate" [(ngModel)]="training.startDate" required> <br>
+    <label for="endDate">Enter EndDate:</label>
+    <input type="date" name="endDate" [(ngModel)]="training.endDate" required> <br>
+    <label for="trainerName">Enter TrainerName:</label>
+    <input type="text" name="trainerName" [(ngModel)]="training.trainerName" placeholder="Enter TrainerName" required> <br>
+    <label for="venue">Enter Venue:</label>
+    <input type="text" name="venue" [(ngModel)]="training.venue" placeholder="Enter Venue" required> <br>
+
+    <button type="submit" [disabled]="!f.valid" >Add Training</button>
+</form>
